@@ -16,7 +16,7 @@ public class CreditOffer extends AbstractModelClass {
 
     @NotNull
     @Column(name = "BANK_ID")
-    private long bank_id;
+    private long bank;
 
     @NotNull
     @ManyToOne(fetch = FetchType.EAGER)
@@ -40,11 +40,11 @@ public class CreditOffer extends AbstractModelClass {
 
     public CreditOffer() {}
 
-    public CreditOffer(Client client, Credit credit, double creditAmount, PaymentSchedule paymentSchedule, long bank_id) {
+    public CreditOffer(Client client, Credit credit, double creditAmount, PaymentSchedule paymentSchedule, long bank) {
         this.client = client;
         this.credit = credit;
         this.creditAmount = creditAmount;
         this.paymentSchedule = paymentSchedule;
-        this.bank_id = bank_id;
+        this.bank = bank;
     }
 }

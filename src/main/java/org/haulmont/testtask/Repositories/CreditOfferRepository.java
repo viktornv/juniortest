@@ -12,11 +12,10 @@ import java.util.List;
 
 @Repository
 public interface CreditOfferRepository extends JpaRepository<CreditOffer, Long> {
-    @Query("select p from CreditOffer p where p.bank_id =:bankID")
-    List<CreditOffer> findAllOffersForClient(@Param("bankID") long bankID);
+
+    List<CreditOffer> findByBank(long bankID);
 
     @Transactional
     @Modifying
-    @Query("delete from CreditOffer p where p.bank_id =:bankID")
-    void deleteAllOffersForClient(@Param("bankID") long bankID);
+    void deleteByBank(long bankID);
 }

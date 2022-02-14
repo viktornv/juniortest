@@ -30,7 +30,6 @@ public class Bank extends AbstractModelClass {
     @Override
     public String toString() {
        return this.client +" " + this.creditInBank;
-      //  return  this.creditInBank.getCreditLimit() + " руб.,  ";
     }
 
 }

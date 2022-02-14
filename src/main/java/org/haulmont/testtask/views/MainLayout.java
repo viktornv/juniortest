@@ -13,7 +13,6 @@ import com.vaadin.flow.router.RouterLink;
 
 
 
-
 public class MainLayout extends AppLayout {
 
     public MainLayout() {

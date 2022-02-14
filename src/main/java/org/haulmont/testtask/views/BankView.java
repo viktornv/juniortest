@@ -71,7 +71,7 @@ public class BankView extends VerticalLayout {
     }
 
     private void deleteBank(BankForm.DeleteEvent event) {
-        creditOfferRepository.deleteAllOffersForClient(event.getBank().getId());
+        creditOfferRepository.deleteByBank(event.getBank().getId());
         bankService.delete(event.getBank());
 
 
